@@ -1,0 +1,14 @@
+@import './colors.scss';
+
+.button-primary {
+    background-color: $background-dark-color;
+    border: none;
+    outline: none;
+    &:hover {
+        background-color: $background-dark-color;
+    }
+}
+
+.button-close {
+    border-radius: 40px;
+}
