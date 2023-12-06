@@ -29,7 +29,7 @@ export class MovieComponent implements OnInit {
   }
 
   onResize = (): void => {
-    this.videoWidth = Math.min(this.youTubePlayer.nativeElement.clientWidth, 750);
+    this.videoWidth = Math.min(this.youTubePlayer?.nativeElement.clientWidth, 750);
     this.videoHeight = this.videoWidth * 0.6;
     this._changeDetectorRef.detectChanges();
   }
