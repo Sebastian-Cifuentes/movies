@@ -9,7 +9,7 @@ import { StorageService } from './storage.service';
 })
 export class MoviesService {
 
-  private api_data = '../../assets/data/data.json';
+  private api_data = 'assets/data/data.json';
 
   constructor(
     private http: HttpClient,
