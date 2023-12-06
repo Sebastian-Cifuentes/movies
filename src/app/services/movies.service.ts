@@ -56,6 +56,7 @@ export class MoviesService {
   }
 
   search(value: string): Movie[] {
+    value = value.toLowerCase();
     const movies = this.getMovies.map(m => ({...m, title: m.title?.toLowerCase()}))
     let filterMovies = movies.filter(m => m.title?.includes(value));
     filterMovies = filterMovies.map(m => {
