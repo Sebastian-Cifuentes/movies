@@ -1,13 +1,16 @@
 <div class="card-movie pointer mr-1 mb-3" placement="right" [ngbTooltip]="info" tooltipClass="custom-tooltip">
     <div class="card-movie__image">
         <span *ngIf="!movie.in_watch_list" class="watch" (click)="handelWatchList(movie.id)" ngbTooltip="Add to my watch list" placement="top">
-            <i class="fa-solid fa-clock"></i>
+            <i class="fa-solid fa-circle-plus"></i>
         </span>
         <span *ngIf="movie.in_watch_list" class="watch" (click)="handelWatchList(movie.id)" ngbTooltip="Remove to my watch list" placement="top">
             <i class="fa-solid fa-circle-check"></i>
         </span>
         <img (click)="goToMovie(movie.id)" class="image" src="assets/images/{{movie.thumbnail}}" [alt]="movie.title">
-        <p class="rate">{{movie.rating}}</p>
+        <p class="rate">
+            <i class="fa-solid fa-star"></i>
+            {{movie.rating}}
+        </p>
     </div>
     <p (click)="goToMovie(movie.id)" class="title mt-2">{{movie.title}}</p>
 </div>

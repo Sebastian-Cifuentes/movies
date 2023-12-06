@@ -30,6 +30,9 @@ body {
     background-color: $background-dark-color;
     font-weight: bold;
     padding: 3px 6px;
+    i {
+        color: #ed8936
+    }
 }
 
 .modal-backdrop {
