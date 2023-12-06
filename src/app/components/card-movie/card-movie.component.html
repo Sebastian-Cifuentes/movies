@@ -6,7 +6,7 @@
         <span *ngIf="movie.in_watch_list" class="watch" (click)="handelWatchList(movie.id)" ngbTooltip="Remove to my watch list" placement="top">
             <i class="fa-solid fa-circle-check"></i>
         </span>
-        <img (click)="goToMovie(movie.id)" class="image" src="../../../assets/images/{{movie.thumbnail}}" alt="">
+        <img (click)="goToMovie(movie.id)" class="image" src="assets/images/{{movie.thumbnail}}" alt="">
         <p class="rate">{{movie.rating}}</p>
     </div>
     <p (click)="goToMovie(movie.id)" class="title mt-2">{{movie.title}}</p>

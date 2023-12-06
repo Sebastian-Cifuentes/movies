@@ -1,7 +1,6 @@
 import { Component, Input, OnInit, Signal, computed, signal } from '@angular/core';
 import { Movie } from 'src/app/interfaces/movie';
 import { MoviesService } from 'src/app/services/movies.service';
-import { StorageService } from '../../../services/storage.service';
 import { sortByTitle, sortByDate } from '../../../utils';
 
 @Component({
