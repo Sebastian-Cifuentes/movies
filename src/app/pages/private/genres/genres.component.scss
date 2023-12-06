@@ -1,0 +1,24 @@
+.genres {
+    .filters {
+        max-width: 35%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 1200px) {
+    .genres {
+        .filters {
+            max-width: 40% !important;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .genres {
+        .filters {
+            max-width: 100% !important;
+            justify-content: space-evenly !important;
+        }
+    }
+}

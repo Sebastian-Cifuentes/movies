@@ -1,0 +1,5 @@
+<select (change)="sortReleaseDate($event.target)" [value]="release_date_value() || ''" class="btn button-primary">
+    <option selected value="">Sort release date by...</option>
+    <option value="ascendant">Ascendant</option>
+    <option value="descendant">Descendant</option>
+</select>

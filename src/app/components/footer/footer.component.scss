@@ -1,0 +1,13 @@
+@import '../../../assets/styles/colors.scss';
+
+.footer {
+    background-color: $background-dark-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 60px;
+    .copyright {
+        color: white;
+        margin: 0;
+    }
+}

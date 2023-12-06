@@ -1,0 +1,5 @@
+<select (change)="sortTitle($event.target)" class="btn button-primary" [value]="title_value() || ''">
+    <option selected value="">Sort title by...</option>
+    <option value="ascendant">Ascendant</option>
+    <option value="descendant">Descendant</option>
+</select>

@@ -1,0 +1,46 @@
+<div class="movie mt-5">
+    <div class="movie__image">
+        <img class="image" src="../../../../assets/images/{{movie.thumbnail}}" alt="">
+    </div>
+    <div class="movie__info">
+        <span *ngIf="movie.in_watch_list" class="in-list rate">In my watch list</span>
+        <h2 class="title mb-2">
+            {{movie.title}}
+        </h2>
+        <p class="rest_info mb-5">
+            <span class="rate mr-4">{{movie.rating}}</span>
+            <span class="duration mr-4">{{movie.duration}}</span>
+            <span class="released_date">{{movie.released_date}}</span>
+        </p>
+        <p class="desc mb-5">{{movie.description}}</p>
+        <p class="gender">Genero: 
+            <span *ngFor="let g of movie.genre; let i = index">
+                {{g}}<span *ngIf="i !== movie.genre!.length -1">, </span>
+            </span>
+        </p>
+        <button (click)="openTrailer(content)" class="btn button-primary">
+            <i class="fa-regular fa-circle-play mr-2"></i>
+            Play trailer
+        </button>
+    </div>
+</div>
+
+<ng-template #content let-modal>
+	<div class="modal-header">
+		<h4 class="modal-title">Trailer</h4>
+		<button type="button" class="btn button-primary button-close" (click)="modal.dismiss()">
+            <i class="fa-solid fa-x"></i>
+        </button>
+	</div>
+	<div class="modal-body">
+            <div #youTubePlayer class="youtube-player">
+                <section>
+                  <youtube-player [videoId]="video_id" [width]="videoWidth" [height]="videoHeight"></youtube-player>
+                </section>
+             </div>
+	</div>
+</ng-template>
+
+
+
+

@@ -1,0 +1,56 @@
+@import '../../../assets/styles/colors.scss';
+
+.card-movie {
+    width: 250px;
+    .card-movie__image {
+        height: 350px;
+        position: relative;
+        .watch {
+            z-index: 1;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            i {
+                color: white;
+                font-size: 25px;
+            }
+        }
+        .image {
+            width: 250px;
+            border-radius: 10px;
+            height: 350px;
+        }
+        .rate {
+            margin: 0;
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+    }
+
+    .title {
+        text-align: center;
+    }
+}
+
+::ng-deep .custom-tooltip .tooltip-inner {
+    // background: red !important;
+    // padding: 10px;
+    // font-size: 14px !important;
+    // position: absolute;
+    // bottom: -100px;
+    // left: 0px;
+    // width: 200px;
+}
+
+.movie-information {
+    .title {
+        color: white
+    }
+    .duration {
+        color: gray;
+    }
+    .desc {
+        color: gray;
+    }
+}

@@ -1,0 +1,11 @@
+<div class="genres">
+    <h2 class="mb-3 title-section">{{(genre_value() | titlecase) || 'Genres'}} movies</h2>
+
+    <div class="filters">
+        <app-select-genre [genre]="genre_value()"></app-select-genre>
+    </div>
+
+    <div class="grid mt-4">
+        <app-card-movie *ngFor="let movie of movies()" [movie]="movie"></app-card-movie>
+    </div>
+</div>

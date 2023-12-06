@@ -1,0 +1,12 @@
+<div class="movies">
+    <h2 class="mb-3 title-section">Latest movies</h2>
+
+    <div class="filters">
+        <app-sort-by-title [title]="title_value()"></app-sort-by-title>
+        <app-sort-by-release-date [releaseDate]="release_date_value()"></app-sort-by-release-date>
+    </div>
+
+    <div class="grid mt-4">
+        <app-card-movie *ngFor="let movie of movies()" [movie]="movie"></app-card-movie>
+    </div>
+</div>

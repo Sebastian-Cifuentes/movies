@@ -1,0 +1,7 @@
+<div class="search">
+    <h2 class="mb-3">Search movies with: <em>{{search_value()}}</em></h2>
+
+    <div class="grid mt-4">
+        <app-card-movie *ngFor="let movie of movies()" [movie]="movie"></app-card-movie>
+    </div>
+</div>

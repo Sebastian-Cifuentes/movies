@@ -1,0 +1,7 @@
+<div class="favorites">
+    <h2 *ngIf="moviesList.length > 0" class="mb-3 title-section">My list</h2>
+    <div *ngIf="moviesList.length > 0" class="grid">
+        <app-card-movie *ngFor="let movie of moviesList" [movie]="movie" (onchangelist)="reloadMovies($event)"></app-card-movie>
+    </div>
+    <p *ngIf="moviesList.length === 0">No found movies</p>
+</div>
